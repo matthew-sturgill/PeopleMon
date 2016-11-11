@@ -16,4 +16,5 @@
     <string name="validemail">Provide valid email</string>
     <string name="Passwordsdontmatch">Passwords don\'t match</string>
     <string name="regfailed">Registration Failed</string>
+    <string name="YOUR_API_KEY">AIzaSyAcU_C84OBUTwZCY6zRS2e_WhhoKMTat3c</string>
 </resources>

@@ -2,6 +2,8 @@ package mattsturgill.peoplemongo.Stages;
 
 import android.app.Application;
 
+import com.davidstemmer.screenplay.stage.Stage;
+
 import mattsturgill.peoplemongo.PeopleMonGoApplication;
 import mattsturgill.peoplemongo.R;
 import mattsturgill.peoplemongo.Riggers.SlideRigger;
@@ -29,7 +31,6 @@ public class PeopleMonListStage extends IndexedStage {
     }
 
     @Override
-    public Rigger getRigger() {
-        return rigger;
+    public Stage.Rigger getRigger() {return rigger;
     }
 }

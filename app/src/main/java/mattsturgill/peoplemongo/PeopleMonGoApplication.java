@@ -31,7 +31,5 @@ public class PeopleMonGoApplication extends Application{
     public static Flow getMainFlow(){
         return getInstance().mainFlow;
     }
-
-
 }
 

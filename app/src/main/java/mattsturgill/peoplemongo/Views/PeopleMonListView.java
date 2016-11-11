@@ -28,8 +28,6 @@ public class PeopleMonListView extends RelativeLayout {
     @Bind(R.id.go_to_map_button)
     FloatingActionButton goToMapButton;
 
-
-
     public PeopleMonListView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
@@ -46,7 +44,7 @@ public class PeopleMonListView extends RelativeLayout {
         History newHistory = flow.getHistory().buildUpon()
                 .push(new MapStage())
                 .build();
-        flow.setHistory(newHistory, Flow.Direction.FORWARD);
+        flow.setHistory(newHistory, Flow.Direction.BACKWARD);
     }
 }
 

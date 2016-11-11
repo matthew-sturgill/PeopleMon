@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
         dispatcher = new ScreenplayDispatcher(this, container);
         dispatcher.setUp(flow);
 
-
         if (UserStore.getInstance().getToken() == null ||
                 UserStore.getInstance().getTokenExpiration() == null) {
             History newhistory = History.single(new LoginStage());
@@ -49,10 +48,17 @@ public class MainActivity extends AppCompatActivity {
 
         //COMMENT OUT THIS FILE!
         if (Build.VERSION.SDK_INT >= 23) {
-            if (!(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED)) {
-                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
+            if (!(ContextCompat.checkSelfPermission(this,
+                    Manifest.permission.ACCESS_FINE_LOCATION) ==
+                    PackageManager.PERMISSION_GRANTED)) {
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
             }
-            if (!(ContextCompat.checkSelfPermission(this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED)) {
+            if (!(ContextCompat.checkSelfPermission(this,
+                    android.Manifest.permission.READ_EXTERNAL_STORAGE) ==
+                    PackageManager.PERMISSION_GRANTED)) {
+                ActivityCompat.requestPermissions(this,
+                        new String[]{android.Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
 
             }
         }

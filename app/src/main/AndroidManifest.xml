@@ -12,14 +12,14 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/pokeball"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:name=".PeopleMonGoApplication">
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="Insert google maps api key"/>
+            android:value="AIzaSyAcU_C84OBUTwZCY6zRS2e_WhhoKMTat3c"/>
         <activity android:name=".MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>

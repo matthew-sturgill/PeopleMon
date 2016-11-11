@@ -1,5 +1,8 @@
 package mattsturgill.peoplemongo.Network;
 
+import mattsturgill.peoplemongo.Models.CatchUser;
+import mattsturgill.peoplemongo.Models.CheckIn;
+import mattsturgill.peoplemongo.Models.Message;
 import mattsturgill.peoplemongo.Models.User;
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -21,6 +24,15 @@ public interface ApiService {
 
     @POST("/api/Account/Register")
     Call<Void> register(@Body User user);
+
+    @POST("/v1/User/CheckIn")
+    Call<Void> checkIn(@Body CheckIn checkIn);
+
+    @POST ("/v1/User/Catch")
+    Call <Void> catchUser(@Body CatchUser catchUser);
+
+    @POST ("/v1/User/Conversation")
+    Call<Void> Conversation(@Body Message message);
 
 
 
