@@ -64,8 +64,6 @@ public class RegisterView extends LinearLayout {
         ButterKnife.bind(this);
     }
 
-
-
     @RequiresApi(api = Build.VERSION_CODES.N)
     @OnClick(R.id.register_button2)
     public void register(){
@@ -83,7 +81,6 @@ public class RegisterView extends LinearLayout {
         String confirm = confirmField.getText().toString();
         String apiK = apiKey;
 
-
         if ( email.isEmpty() || fullname.isEmpty() || password.isEmpty() || confirm.isEmpty()){
             Toast.makeText(context, R.string.please_fill_fields, Toast.LENGTH_LONG).show();
         } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
@@ -94,8 +91,6 @@ public class RegisterView extends LinearLayout {
             registerButton.setEnabled(false);
             spinner.setVisibility(VISIBLE);
 
-
-           // User user = new User(email, fullname, avatar, api, password);
             User user = new User(email, fullname, null, null, password);
             RestClient restClient = new RestClient();
             restClient.getApiService().register(user).enqueue(new Callback<Void>() {
@@ -128,5 +123,4 @@ public class RegisterView extends LinearLayout {
         registerButton.setEnabled(true);
         spinner.setVisibility(GONE);
     }
-
 }

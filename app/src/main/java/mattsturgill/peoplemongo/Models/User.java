@@ -34,6 +34,11 @@ public class User {
     @SerializedName("AvatarBase64")
     private String avatar = "string";
 
+    @SerializedName("Longitude")
+    private Double longitude;
+
+    @SerializedName("Latitude")
+    private Double latitude;
 
     public User(){
 
@@ -53,6 +58,11 @@ public class User {
         this.password = password;
         this.grantType = "password";
 
+    }
+
+    public User (Double latitude, Double longitude){
+        this.latitude = latitude;
+        this.longitude = longitude;
     }
 
     public String getFullname() {
@@ -95,4 +105,21 @@ public class User {
 
     public void setApiKey(String apiKey) {this.apiKey = apiKey; }
 
+    public Double getLongitude() {
+        return longitude;
+    }
+
+    public void setLatitude(Double latitude) {
+        this.latitude = latitude;
+    }
+
+    public void setLongitude(Double longitude) {
+
+        this.longitude = longitude;
+    }
+
+    public Double getLatitude() {
+
+        return latitude;
+    }
 }

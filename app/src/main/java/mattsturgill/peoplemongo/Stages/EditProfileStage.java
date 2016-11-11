@@ -9,25 +9,25 @@ import mattsturgill.peoplemongo.R;
 import mattsturgill.peoplemongo.Riggers.SlideRigger;
 
 /**
- * Created by matthewsturgill on 11/7/16.
+ * Created by matthewsturgill on 11/11/16.
  */
 
-public class PeopleMonListStage extends IndexedStage {
+public class EditProfileStage extends IndexedStage{
     private final SlideRigger rigger;
 
-    public PeopleMonListStage(Application context) {
+    public EditProfileStage(Application context){
         super(PeopleMonListStage.class.getName());
         this.rigger = new SlideRigger(context);
     }
 
-    public PeopleMonListStage() {
+    public EditProfileStage(){
         this(PeopleMonGoApplication.getInstance());
 
     }
 
     @Override
     public int getLayoutId() {
-        return R.layout.peoplemon_list_view;
+        return R.layout.edit_profile_view;
     }
 
     @Override
@@ -35,4 +35,3 @@ public class PeopleMonListStage extends IndexedStage {
         return rigger;
     }
 }
-
